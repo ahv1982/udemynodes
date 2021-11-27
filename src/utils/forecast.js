@@ -16,6 +16,10 @@ const forecast = (logitude, latitude, callback) => {
       callback(undefined, {
         temperature: body.current.temperature,
         location: body.location.name,
+        humidity: body.current.humidity,
+        precipitation: body.current.precip,
+        cloudcover: body.current.cloudcover,
+        visibility: body.current.visibility,
       });
     }
   });

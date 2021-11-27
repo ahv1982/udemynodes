@@ -7,9 +7,6 @@ const geoCode = (address, callback) => {
     ".json?access_token=pk.eyJ1IjoiYWh2MTk4MiIsImEiOiJja3dldng4bzYwOHIzMnFwMjJiZmxteWdjIn0.o-8q3syW6OaaKb-gB_ZqXw&limit=1";
 
   request({ url, json: true }, (error, { body }) => {
-    console.log("av");
-    console.log(body);
-    console.log(body.features.length);
     if (error) {
       callback("unable to connect to location services.", undefined);
     } else if (body.features.length === 0) {
